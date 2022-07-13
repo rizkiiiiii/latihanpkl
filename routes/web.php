@@ -65,3 +65,5 @@ Route::get('latihan2/{a?}/{b?}{c?}', function ($a = "Silahkan Pesan Terlebih Dah
 Route::get('perkenalan', [LatihanController::class, 'perkenalan']);
 
 Route::get('perkenalan/{nama}/{alamat}/{umur}' ,[LatihanController::class, 'perkenalan']);
+Route::get('siswa',[LatihanController::class,'siswa']);
+Route::get('mahasiswa',[LatihanController::class,'mahasiswa']);
