@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\LatihanController;
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -64,6 +63,8 @@ Route::get('latihan2/{a?}/{b?}{c?}', function ($a = "Silahkan Pesan Terlebih Dah
 
 Route::get('perkenalan', [LatihanController::class, 'perkenalan']);
 
-Route::get('perkenalan/{nama}/{alamat}/{umur}' ,[LatihanController::class, 'perkenalan']);
-Route::get('siswa',[LatihanController::class,'siswa']);
-Route::get('mahasiswa',[LatihanController::class,'mahasiswa']);
+Route::get('perkenalan/{nama}/{alamat}/{umur}', [LatihanController::class, 'perkenalan']);
+Route::get('siswa', [LatihanController::class, 'siswa']);
+Route::get('mahasiswa', [LatihanController::class, 'mahasiswa']);
+Route::get('televisi', [LatihanController::class, 'televisi']);
+Route::get('shop',[LatihanController::class,'shop']);

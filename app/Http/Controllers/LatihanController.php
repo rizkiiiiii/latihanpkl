@@ -46,5 +46,57 @@ class LatihanController extends Controller
         return view('pages.mahasiswa', ['dosen' => $a]);
 
     }
+    public function televisi()
+    {
+        $tv=[
+            ['Nama_Tv'=>'NET TV' ,
+            'jadwal'=>[
+                ['nama'=>'INI TALK SHOW','jam_tayang'=>'21.00 WIB']
+            ]
+            ],
+            ['Nama_Tv'=>'GTV' ,
+            'jadwal'=>[
+                ['nama'=>'SPONGEBOB SQUARE PANTS','jam_tayang'=>'07.00 WIB']
+            ]
+            ],
+            ['Nama_Tv'=>'BEINSPORT' ,
+            'jadwal'=>[
+                ['nama'=>'ENGLISH PRIMIER LEAGUE','jam_tayang'=>'01.45 WIB']
+            ]
+            ],
+            ['Nama_Tv'=>'ANTV' ,
+            'jadwal'=>[
+                ['nama'=>'AJAB','jam_tayang'=>'21.00 WIB']
+            ]
+            ],
+            ['Nama_Tv'=>'INDOSIAR' ,
+            'jadwal'=>[
+                ['nama'=>'BRI LIGA 1','jam_tayang'=>'20.30 WIB']
+            ]
+            ],
+        ];
+        return view('pages.televisi', ['tv' => $tv]);
+    }
+    public function shop()
+    {
+        $shop=[
+            ['nama_orang'=>'Alfian','pembelian'=>
+            [
+                ['jenis'=> 'SEPATU', 'merk'=>'VANS','harga'=>250000],
+                ['jenis'=> 'BAJU', 'merk'=>'MATERNAL','harga'=>100000],
+                ['jenis'=> 'CELANA', 'merk'=>'ERIGO','harga'=>150000],
+                ['jenis'=> 'TOPI', 'merk'=>'VANS','harga'=>100000],
+            ]
+            ],
+            ['nama_orang'=>'DIDA','pembelian'=>
+            [
+                ['jenis'=> 'TOPI', 'merk'=>'EIGER','harga'=>100000],
+                ['jenis'=> 'BAJU', 'merk'=>'MATERNAL','harga'=>75000],
+                ['jenis'=> 'CELANA', 'merk'=>'ERIGO','harga'=>125000]
+            ]
+            ],
+        ];
+        return view('pages.shop',['shop'=>$shop]);
+    }
 
 }
