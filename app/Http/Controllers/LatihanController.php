@@ -43,7 +43,7 @@ class LatihanController extends Controller
                 ],
             ],
         ];
-        return view('pages.mahasiswa', ['dosen' => $a]);
+        return view('pages.mahasiswa',  ['dosen' => $a]);
 
     }
     public function televisi()
